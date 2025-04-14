@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duozinho - Encontre seu parceiro de jogo</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/modal.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="src/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>duo<span>zinho</span></h1>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Procurar jogadores ou jogos...">
+            <button>Buscar</button>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="/src/pages/jogos.html">Jogos</a></li>
+                <li><a href="comunidades.html">Comunidades</a></li>
+                <li><a href="/src/pages/perfil.html">Meu Perfil</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-profile">
+            <img src="src/images/perfil.png" alt="Perfil">
+            <span style="color: white;">JogadorPRO</span>
+            <button class="theme-toggle" id="theme-toggle">🌓</button>
+        </div>
+    </header>
+    
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="games-list">
+                <h3>Jogos Populares</h3>
+                <ul>
+                    <li>
+                        <img src="src/images/cs.png" alt="CS2">
+                        <a href="jogo-cs2.html">Counter Strike 2</a>
+                    </li>
+                    <li>
+                        <img src="src/images/lol.png" alt="LOL">
+                        <a href="jogo-lol.html">League of Legends</a>
+                    </li>
+                    <li>
+                        <img src="src/images/valorant.jpg" alt="Valorant">
+                        <a href="jogo-valorant.html">Valorant</a>
+                    </li>
+                    <li>
+                        <img src="/src/images/apex.png" alt="Apex">
+                        <a href="jogo-apex.html">Apex Legends</a>
+                    </li>
+                    <li>
+                        <img src="src/images/fortnite.png" alt="Fortnite">
+                        <a href="jogo-fortnite.html">Fortnite</a>
+                    </li>
+                    <li>
+                        <img src="src/images/dota2.png" alt="Dota 2">
+                        <a href="jogo-dota2.html">Dota 2</a>
+                    </li>
+                    <li>
+                        <img src="src/images/overwatch-2.png" alt="Overwatch">
+                        <a href="jogo-overwatch.html">Overwatch 2</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="filters">
+                <h3>Filtrar Jogadores</h3>
+                <div class="filter-group">
+                    <label for="game">Jogo</label>
+                    <select id="game">
+                        <option value="">Todos os jogos</option>
+                        <option value="cs2">Counter Strike 2</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="apex">Apex Legends</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="skill">Nível de habilidade</label>
+                    <select id="skill">
+                        <option value="">Qualquer nível</option>
+                        <option value="beginner">Iniciante</option>
+                        <option value="intermediate">Intermediário</option>
+                        <option value="advanced">Avançado</option>
+                        <option value="pro">Profissional</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="time">Horário disponível</label>
+                    <select id="time">
+                        <option value="">Qualquer horário</option>
+                        <option value="morning">Manhã</option>
+                        <option value="afternoon">Tarde</option>
+                        <option value="night">Noite</option>
+                        <option value="late-night">Madrugada</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="region">Região</label>
+                    <select id="region">
+                        <option value="">Todas as regiões</option>
+                        <option value="br-sul">Brasil - Sul</option>
+                        <option value="br-sudeste">Brasil - Sudeste</option>
+                        <option value="br-centro">Brasil - Centro-Oeste</option>
+                        <option value="br-nordeste">Brasil - Nordeste</option>
+                        <option value="br-norte">Brasil - Norte</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <button>Aplicar Filtros</button>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Encontre seu parceiro de jogo</h2>
+                <div class="view-options">
+                    <select>
+                        <option value="recent">Mais recentes</option>
+                        <option value="popular">Mais populares</option>
+                        <option value="skill">Nível de habilidade</option>
+                    </select>
+                    <button class="create-post">Criar Anúncio</button>
+                </div>
+            </div>
+            
+            <div class="posts-grid">
+                <!-- Post 1 -->
+                <div class="post-card">
+                    <div class="post-image">
+                        <img src="src/images/csss.png" alt="Counter Strike 2">
+                    </div>
+                    <div class="post-content">
+                        <div class="game-info">
+                            <img src="/api/placeholder/20/20" alt="CS2">
+                            <span>Counter Strike 2</span>
+                        </div>
+                        <h3>Procuro time competitivo</h3>
+                        <p class="post-description">Olá pessoal! Sou AWPer com mais de 5 anos de experiência em CS. Procuro time sério para competir em torneios nacionais.</p>
+                        <div class="post-meta">
+                            <div class="player-info">
+                                <img src="/api/placeholder/24/24" alt="Jogador">
+                                <span>SnipeMaster</span>
+                            </div>
+                            <div class="skill-level">
+                                <span>Nível: Avançado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              
+            </div>
+        </main>
+    </div>
+    <div class="modal-overlay" id="createPostModal" style="display: none;">
+        <!-- Modal Container -->
+        <div class="modal">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h3>Criar Novo Anúncio</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <form id="createPostForm">
+                    <div class="form-group">
+                        <label for="postTitle">Título do Anúncio*</label>
+                        <input type="text" id="postTitle" placeholder="Ex: Procuro time para competição" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gameSelect">Jogo*</label>
+                            <select id="gameSelect" required>
+                                <option value="">Selecione um jogo</option>
+                                <option value="cs2">Counter Strike 2</option>
+                                <option value="lol">League of Legends</option>
+                                <option value="valorant">Valorant</option>
+                                <option value="apex">Apex Legends</option>
+                                <option value="fortnite">Fortnite</option>
+                                <option value="dota2">Dota 2</option>
+                                <option value="overwatch">Overwatch 2</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="skillLevel">Nível de Habilidade*</label>
+                            <select id="skillLevel" required>
+                                <option value="">Selecione um nível</option>
+                                <option value="beginner">Iniciante</option>
+                                <option value="intermediate">Intermediário</option>
+                                <option value="advanced">Avançado</option>
+                                <option value="pro">Profissional</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="timeAvailable">Horário Disponível*</label>
+                            <select id="timeAvailable" required>
+                                <option value="">Selecione um horário</option>
+                                <option value="morning">Manhã</option>
+                                <option value="afternoon">Tarde</option>
+                                <option value="night">Noite</option>
+                                <option value="late-night">Madrugada</option>
+                                <option value="flexible">Flexível</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="region">Região*</label>
+                            <select id="region" required>
+                                <option value="">Selecione uma região</option>
+                                <option value="br-sul">Brasil - Sul</option>
+                                <option value="br-sudeste">Brasil - Sudeste</option>
+                                <option value="br-centro">Brasil - Centro-Oeste</option>
+                                <option value="br-nordeste">Brasil - Nordeste</option>
+                                <option value="br-norte">Brasil - Norte</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tags (Opcional)</label>
+                        <div class="tags-input-container">
+                            <span class="tag">Competitivo <span class="tag-close">×</span></span>
+                            <input type="text" class="tags-input" placeholder="Adicione tags separadas por vírgula">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postDescription">Descrição*</label>
+                        <textarea id="postDescription" placeholder="Descreva o que você está procurando, sua experiência, objetivos..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Imagem do Anúncio (Opcional)</label>
+                        <div class="file-input-container">
+                            <label class="file-input-label">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                                <span>Arraste e solte uma imagem ou clique para selecionar</span>
+                                <input type="file" class="file-input" id="imageUpload" accept="image/*">
+                            </label>
+                            <img src="" class="file-preview" id="imagePreview">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelButton">Cancelar</button>
+                <button class="btn btn-primary" id="submitButton">Publicar Anúncio</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>duo<span>zinho</span></h2>
+            </div>
+            
+            <div class="footer-links">
+                <ul>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="termos.html">Termos de uso</a></li>
+                    <li><a href="privacidade.html">Política de privacidade</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            &copy; 2025 Duozinho - A melhor plataforma para encontrar parceiros de jogo
+        </div>
+    </footer>
+</body>
+</html>
