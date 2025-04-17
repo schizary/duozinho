@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Duozinho</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>duo<span>zinho</span></h1>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Procurar jogadores ou jogos...">
+            <button>Buscar</button>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../../duozinho-gaming-forum.html">Início</a></li>
+                <li><a href="jogos.html">Jogos</a></li>
+                <li><a href="comunidades.html">Comunidades</a></li>
+                <li><a href="perfil.html">Meu Perfil</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-profile">
+            <div class="profile-link" onclick="window.location.href='src/pages/login.html'">
+                <img src="../images/perfil.png" alt="Perfil">
+                <span style="color: white;">JogadorPRO</span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Bem-vindo de volta!</h2>
+            <p class="login-subtitle">Entre para encontrar seu parceiro de jogo</p>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+                
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <span>Lembrar de mim</span>
+                    </label>
+                    <a href="recuperar-senha.html" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+                
+                <button type="submit" class="login-button">Entrar</button>
+                
+                    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>duo<span>zinho</span></h2>
+            </div>
+            
+            <div class="footer-links">
+                <ul>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="termos.html">Termos de uso</a></li>
+                    <li><a href="privacidade.html">Política de privacidade</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            &copy; 2025 Duozinho - A melhor plataforma para encontrar parceiros de jogo
+        </div>
+    </footer>
+</body>
+</html> 

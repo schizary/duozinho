@@ -113,4 +113,35 @@ $(document).ready(function() {
             $createPostForm.trigger('submit');
         }
     });
+
+    // Handle user profile click
+    document.addEventListener('DOMContentLoaded', function() {
+        const userProfile = document.querySelector('.user-profile');
+        if (userProfile) {
+            // Create a div that wraps the profile image and name
+            const profileContent = document.createElement('div');
+            profileContent.className = 'profile-content';
+            profileContent.style.display = 'flex';
+            profileContent.style.alignItems = 'center';
+            profileContent.style.gap = '0.5rem';
+            profileContent.style.cursor = 'pointer';
+
+            // Move the profile image and name into the new div
+            const profileImg = userProfile.querySelector('img');
+            const profileName = userProfile.querySelector('span');
+            const themeToggle = userProfile.querySelector('.theme-toggle');
+
+            if (profileImg && profileName) {
+                profileContent.appendChild(profileImg);
+                profileContent.appendChild(profileName);
+                userProfile.insertBefore(profileContent, themeToggle);
+
+                // Add click event only to the profile content
+                profileContent.addEventListener('click', function() {
+                    window.location.href = 'src/pages/login.html';
+                });
+            }
+        }
+    });
 });
+
