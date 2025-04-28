@@ -58,7 +58,8 @@
         padding: 24px;
         background-color: var(--bg-color);
         max-height: 80vh;
-        overflow-y: auto;
+        overflow-y: scroll;
+        scrollbar-width: none;
     }
 
     .form-group {

@@ -2,21 +2,24 @@ $(document).ready(function() {
     // Verificar se há uma preferência de tema armazenada
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
-        $('html').removeClass('light-mode').addClass('dark-mode');
-        $('#theme-toggle').text('☀️');
+        $('html').attr('data-theme', 'dark');
+        $('.dark-mode-toggle img').attr('src', '/src/images/light_mode.svg');
     }
     
     // Alternar entre modo claro e escuro
-    $('#theme-toggle').click(function() {
-        if ($('html').hasClass('light-mode')) {
-            $('html').removeClass('light-mode').addClass('dark-mode');
-            localStorage.setItem('theme', 'dark');
-            $(this).text('☀️');
-        } else {
-            $('html').removeClass('dark-mode').addClass('light-mode');
-            localStorage.setItem('theme', 'light');
-            $(this).text('🌓');
-        }
+    $('.dark-mode-toggle').click(function() {
+        const html = $('html');
+        const currentTheme = html.attr('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        html.attr('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Atualizar ícone
+        const img = $(this).find('img');
+        img.attr('src', newTheme === 'dark' ? 
+            '/src/images/light_mode.svg' : 
+            '/src/images/dark_mode.svg');
     });
 
     // Aplicar filtros

@@ -1,19 +1,27 @@
 :root {
-    --primary-color: #6c63ff;
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --card-background-color: #f0f0f0;
-    --hero-gradient: linear-gradient(to top right, #3722C3 0%, #6B51D2 64%, #9A6EFF 100%);
+    /* Light mode variables */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #4D2BC9;
+    --secondary-color: #6c757d;
+    --card-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --hover-color: #e9ecef;
     --icon-filter: none;
+    --hero-gradient: linear-gradient(to top right, #3722C3 0%, #6B51D2 64%, #9A6EFF 100%);
 }
 
-body.dark-mode {
-    --primary-color: #6c63ff;
-    --background-color: #121212;
+[data-theme="dark"] {
+    /* Dark mode variables */
+    --bg-color: #0E0E1A;
     --text-color: #ffffff;
-    --card-background-color: #1e1e1e;
-    --hero-gradient: linear-gradient(to top right, #070311 0%, #270C65 55%, #321B88 75%, #3B2BA8 100%);
+    --primary-color: #4D2BC9;
+    --secondary-color: #adb5bd;
+    --card-bg: #1e1e1e;
+    --border-color: #2d2d2d;
+    --hover-color: #2d2d2d;
     --icon-filter: invert(1);
+    --hero-gradient: linear-gradient(to top right, #070311 0%, #270C65 55%, #321B88 75%, #3B2BA8 100%);
 }
 
 * {
@@ -27,8 +35,9 @@ body.dark-mode {
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header {
@@ -36,7 +45,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     border-bottom: 1px solid var(--primary-color);
     flex-wrap: wrap;
@@ -136,7 +145,7 @@ body {
 .popular-games {
     text-align: center;
     padding: 40px 20px;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
 }
 
 .popular-games h2 {
@@ -154,7 +163,7 @@ body {
     width: 379px;
     height: 212px;
     border-radius: 10px;
-    background-color: var(--card-background-color);
+    background-color: var(--card-bg);
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     object-fit: cover;
@@ -163,7 +172,7 @@ body {
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     border-top: 1px solid var(--primary-color);
 }

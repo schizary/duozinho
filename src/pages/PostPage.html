@@ -1,59 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="light-mode">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duozinho - Encontre seu parceiro de jogo</title>
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/index.css">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="src/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/PostPage.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/scriptTeste.js"></script>
+    <script src="../js/modal.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
-            <h1>duo<span>zinho</span></h1>
+            <img src="/src/images/duozinhoLOGO.png" alt="Logo" class="logo-icon">
+            <span>duozinho</span>
         </div>
         
-        <div class="search-bar">
-            <input type="text" placeholder="Procurar jogadores ou jogos...">
-            <button>Buscar</button>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="./src/pages/jogos.html">Jogos</a></li>
-                <li><a href="comunidades.html">Comunidades</a></li>
-                <li><a href="/src/pages/perfil.html">Meu Perfil</a></li>
-            </ul>
+        <nav class="nav">
+            <a href="../../index.html">Início</a>
+            <a href="jogos.html">Jogos</a>
+            <a href="comunidades.html">Comunidades</a>
+            <a href="perfil.html">Meu Perfil</a>
         </nav>
         
-        <div class="user-profile">
-            <div class="profile-link" onclick="window.location.href='src/pages/login.html'">
-                <img src="src/images/perfil.png" alt="Perfil">
-                <span style="color: white;">JogadorPRO</span>
-            </div>
-            <button class="theme-toggle" id="theme-toggle">🌓</button>
+        <div class="actions">
+            <button class="notification-btn"><img src="/src/images/notifications.svg" alt="Notificações"></button>
+            <button class="profile-btn"><img src="/src/images/account_circle.svg" alt="Perfil"></button>
+            <button class="dark-mode-toggle"><img src="/src/images/dark_mode.svg" alt="Modo Escuro"></button>
         </div>
     </header>
     
     <div class="main-container">
         <aside class="sidebar">
             <div class="games-list">
-                <h3>Jogos Populares</h3>
+                <h2 style="color: #432BAA; margin-bottom: 10px;">Jogos Populares</h2>
                 <ul>
                     <li>
-                        <img src="src/images/cs.png" alt="CS2">
+                        <img src="/src/images/cs.png" alt="CS2">
                         <a href="jogo-cs2.html">Counter Strike 2</a>
                     </li>
                     <li>
-                        <img src="src/images/lol.png" alt="LOL">
+                        <img src="/src/images/lol.png" alt="LOL">
                         <a href="jogo-lol.html">League of Legends</a>
                     </li>
                     <li>
-                        <img src="src/images/valorant.jpg" alt="Valorant">
+                        <img src="/src/images/valorantIndex.jpg" alt="Valorant">
                         <a href="jogo-valorant.html">Valorant</a>
                     </li>
                     <li>
@@ -61,22 +60,22 @@
                         <a href="jogo-apex.html">Apex Legends</a>
                     </li>
                     <li>
-                        <img src="src/images/fortnite.png" alt="Fortnite">
+                        <img src="/src/images/fortnite.png" alt="Fortnite">
                         <a href="jogo-fortnite.html">Fortnite</a>
                     </li>
                     <li>
-                        <img src="src/images/dota2.png" alt="Dota 2">
+                        <img src="/src/images/dota2.png" alt="Dota 2">
                         <a href="jogo-dota2.html">Dota 2</a>
                     </li>
                     <li>
-                        <img src="src/images/overwatch-2.png" alt="Overwatch">
+                        <img src="/src/images/overwatch-2.png" alt="Overwatch">
                         <a href="jogo-overwatch.html">Overwatch 2</a>
                     </li>
                 </ul>
             </div>
             
             <div class="filters">
-                <h3>Filtrar Jogadores</h3>
+                <h2 style="color: #432BAA; margin-bottom: 10px;">Filtrar Posts</h2>
                 <div class="filter-group">
                     <label for="game">Jogo</label>
                     <select id="game">
@@ -130,14 +129,14 @@
         
         <main class="main-content">
             <div class="content-header">
-                <h2>Encontre seu parceiro de jogo</h2>
+                <h2 style="color: #432BAA;">Encontre seu parceiro de jogo</h2>
                 <div class="view-options">
                     <select>
                         <option value="recent">Mais recentes</option>
                         <option value="popular">Mais populares</option>
                         <option value="skill">Nível de habilidade</option>
                     </select>
-                    <button class="create-post">Criar Anúncio</button>
+                    <button class="create-post" id="createPostBtn">Criar Anúncio</button>
                 </div>
             </div>
             
@@ -145,7 +144,7 @@
                 <!-- Post 1 -->
                 <div class="post-card">
                     <div class="post-image">
-                        <img src="src/images/csss.png" alt="Counter Strike 2">
+                        <img src="/src/images/csss.png" alt="Counter Strike 2">
                     </div>
                     <div class="post-content">
                         <div class="game-info">

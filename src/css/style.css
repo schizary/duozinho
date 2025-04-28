@@ -1,31 +1,47 @@
 :root {
-    /* Variáveis do modo claro */
-    --bg-color: #f5f6fa;
-    --text-color: #2d3436;
+    /* Light mode variables */
+    --bg-color: #ffffff;
+    --text-color: #b98080;
+    --primary-color: #4D2BC9;
+    --primary-color-rgb: 77, 43, 201;
+    --secondary-color: #6c757d;
+    --card-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --hover-color: #e9ecef;
+    --icon-filter: none;
     --primary: #542e92;
     --secondary: #a29bfe;
     --accent: #fd79a8;
-    --card-bg: white;
     --header-bg: #65008d;
     --footer-bg: #2d3436;
-    --border-color: #eee;
     --meta-color: #666;
     --success: #00b894;
+    --border-box: 0 12px 28px 0 rgba(0, 0, 0, 0.2),
+    0 2px 4px 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-.dark-mode {
-    /* Variáveis do modo escuro */
-    --bg-color: #1a1a2e;
-    --text-color: #e6e6e6;
+[data-theme="dark"] {
+    /* Dark mode variables */
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #4D2BC9;
+    --primary-color-rgb: 77, 43, 201;
+    --secondary-color: #adb5bd;
+    --card-bg: #1e1e1e;
+    --border-color: #2d2d2d;
+    --hover-color: #2d2d2d;
+    --icon-filter: invert(1);
     --primary: #8675e9;
     --secondary: #b0a6fe;
     --accent: #ff82b2;
-    --card-bg: #2a2a4a;
     --header-bg: #16213e;
     --footer-bg: #0f0f1a;
-    --border-color: #444;
     --meta-color: #aaa;
     --success: #26c49f;
+    --border-box: 0 12px 28px 0 rgba(212, 212, 212, 0.1),
+    0 2px 4px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -162,15 +178,36 @@ nav ul li a:hover {
     top: 100px;
     height: fit-content;
     margin-left: 2rem;
+    background: none;
 }
 
 .games-list {
-    background-color: var(--card-bg);
+    background-color: var(--bg-color);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--border-box);
     padding: 1rem;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
+}
+
+.games-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+@keyframes borderFade {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
 }
 
 .games-list h3 {
@@ -212,9 +249,9 @@ nav ul li a:hover {
 }
 
 .filters {
-    background-color: var(--card-bg);
+    background-color: var(--bg-color);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--border-box);
     padding: 1rem;
     transition: all 0.3s ease;
 }
@@ -273,10 +310,10 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    background-color: var(--card-bg);
+    background-color: var(--bg-color);
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--border-box);
 }
 
 .content-header h2 {
@@ -299,7 +336,7 @@ nav ul li a:hover {
 
 .create-post {
     padding: 0.7rem 1.5rem;
-    background-color: var(--accent);
+    background-color: #432BAA;
     color: white;
     border: none;
     border-radius: 4px;
@@ -323,7 +360,7 @@ nav ul li a:hover {
 .post-card {
     background-color: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--border-box);
     overflow: hidden;
     transition: all 0.3s ease;
 }
