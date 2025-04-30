@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../css/index.css">
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/PostPage.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/PostPage.js?v=1""></script>
     <script src="../js/script.js"></script>
     <script src="../js/scriptTeste.js"></script>
     <script src="../js/modal.js"></script>
@@ -52,7 +53,7 @@
                         <a href="jogo-lol.html">League of Legends</a>
                     </li>
                     <li>
-                        <img src="/src/images/valorantIndex.jpg" alt="Valorant">
+                        <img src="/src/images/valorant.jpg" alt="Valorant">
                         <a href="jogo-valorant.html">Valorant</a>
                     </li>
                     <li>
@@ -147,10 +148,6 @@
                         <img src="/src/images/csss.png" alt="Counter Strike 2">
                     </div>
                     <div class="post-content">
-                        <div class="game-info">
-                            <img src="/api/placeholder/20/20" alt="CS2">
-                            <span>Counter Strike 2</span>
-                        </div>
                         <h3>Procuro time competitivo</h3>
                         <p class="post-description">Olá pessoal! Sou AWPer com mais de 5 anos de experiência em CS. Procuro time sério para competir em torneios nacionais.</p>
                         <div class="post-meta">
@@ -180,7 +177,7 @@
             
             <!-- Modal Body -->
             <div class="modal-body">
-                <form id="createPostForm">
+                <form id="postForm">
                     <div class="form-group">
                         <label for="postTitle">Título do Anúncio*</label>
                         <input type="text" id="postTitle" placeholder="Ex: Procuro time para competição" required>
@@ -188,8 +185,8 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="gameSelect">Jogo*</label>
-                            <select id="gameSelect" required>
+                            <label for="gameName">Jogo*</label>
+                            <select id="gameName" required>
                                 <option value="">Selecione um jogo</option>
                                 <option value="cs2">Counter Strike 2</option>
                                 <option value="lol">League of Legends</option>
@@ -240,16 +237,16 @@
                     </div>
                     
                     <div class="form-group">
+                        <label for="postDescription">Descrição*</label>
+                        <textarea id="postDescription" rows="4" placeholder="Descreva o que você está procurando..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
                         <label>Tags (Opcional)</label>
                         <div class="tags-input-container">
                             <span class="tag">Competitivo <span class="tag-close">×</span></span>
                             <input type="text" class="tags-input" placeholder="Adicione tags separadas por vírgula">
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="postDescription">Descrição*</label>
-                        <textarea id="postDescription" placeholder="Descreva o que você está procurando, sua experiência, objetivos..." required></textarea>
                     </div>
                     
                     <div class="form-group">
@@ -267,36 +264,27 @@
                             <img src="" class="file-preview" id="imagePreview">
                         </div>
                     </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelButton">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="submitButton">Publicar Anúncio</button>
+                    </div>
                 </form>
-            </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button class="btn btn-secondary" id="cancelButton">Cancelar</button>
-                <button class="btn btn-primary" id="submitButton">Publicar Anúncio</button>
             </div>
         </div>
     </div>
     
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>duo<span>zinho</span></h2>
-            </div>
-            
-            <div class="footer-links">
-                <ul>
-                    <li><a href="sobre.html">Sobre nós</a></li>
-                    <li><a href="termos.html">Termos de uso</a></li>
-                    <li><a href="privacidade.html">Política de privacidade</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </div>
+        <div class="footer-logo">
+            <img src="../src/images/duozinhoLOGO.png" alt="Logo" class="logo-icon">
+            <span>duozinho</span>
         </div>
-        
-        <div class="footer-copy">
-            &copy; 2025 Duozinho - A melhor plataforma para encontrar parceiros de jogo
-        </div>
+        <nav class="footer-nav">
+            <a href="#">Contato</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <p>&copy; 2025 Duozinho. Todos os direitos reservados</p>
     </footer>
 </body>
 </html>

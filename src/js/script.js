@@ -20,6 +20,18 @@ $(document).ready(function() {
         img.attr('src', newTheme === 'dark' ? 
             '/src/images/light_mode.svg' : 
             '/src/images/dark_mode.svg');
+
+        // Update eye icon when theme changes
+        const passwordInput = $('.toggle-password').siblings('input');
+        const isPasswordVisible = passwordInput.attr('type') === 'text';
+        const isDarkTheme = $('html').attr('data-theme') === 'dark';
+        const eyeImg = $('.toggle-password').find('img');
+        
+        if (isPasswordVisible) {
+            eyeImg.attr('src', isDarkTheme ? '../images/olhoHideBranco.svg' : '../images/olhoHidePreto.svg');
+        } else {
+            eyeImg.attr('src', isDarkTheme ? '../images/olhoBranco.svg' : '../images/olhoPreto.svg');
+        }
     });
 
     // Aplicar filtros
@@ -144,6 +156,23 @@ $(document).ready(function() {
                     window.location.href = 'src/pages/login.html';
                 });
             }
+        }
+    });
+
+    // Toggle password visibility
+    $('.toggle-password').click(function() {
+        const passwordInput = $(this).siblings('input');
+        const currentType = passwordInput.attr('type');
+        const newType = currentType === 'password' ? 'text' : 'password';
+        passwordInput.attr('type', newType);
+
+        // Update eye icon based on theme and visibility
+        const isDarkTheme = $('html').attr('data-theme') === 'dark';
+        const img = $(this).find('img');
+        if (newType === 'text') {
+            img.attr('src', isDarkTheme ? '../images/olhoHideBranco.svg' : '../images/olhoHide.svg');
+        } else {
+            img.attr('src', isDarkTheme ? '../images/olhoBranco.svg' : '../images/olhoPreto.svg');
         }
     });
 });

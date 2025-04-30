@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Duozinho</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/PostPage.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../images/duozinhoLOGO.png" alt="Logo" class="logo-icon">
+            <span>duozinho</span>
+        </div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Times</a>
+            <a href="#">Jogadores</a>
+        </nav>
+        <div class="actions">
+            <button class="notification-btn"><img src="../images/notifications.svg" alt="Notificações"></button>
+            <button class="profile-btn"><img src="../images/account_circle.svg" alt="Perfil"></button>
+            <button class="dark-mode-toggle"><img src="../images/dark_mode.svg" alt="Modo Escuro"></button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2 style="color: #FFF;">Cadastro</h2>
+        <div class="cadastro-box">
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <label for="username" style="color: var(--text-color);">Nome de usuário*</label>
+                    <input type="text" id="username" placeholder="ExemploDeUsuario123" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" style="color: var(--text-color);">E-mail*</label>
+                    <input type="email" id="email" placeholder="ExemploDeEmail@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" style="color: var(--text-color);">Senha*</label>
+                    <div class="password-input-container">
+                        <input type="password" id="password" placeholder="ExemploDeSenha" required>
+                        <button type="button" class="toggle-password">
+                            <img src="../images/olhoPreto.svg" alt="Mostrar/Ocultar senha">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Foto de perfil*</label>
+                    <button type="button" class="upload-button">
+                        <img src="../images/upload.svg" alt="Upload" class="upload-icon">
+                    </button>
+                    <input type="file" id="profilePicture" accept="image/*" style="display: none;">
+                </div>
+                
+                <button type="submit" class="cadastro-button">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="../src/images/duozinhoLOGO.png" alt="Logo" class="logo-icon">
+            <span>duozinho</span>
+        </div>
+        <nav class="footer-nav">
+            <a href="#">Contato</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <p>&copy; 2025 Duozinho. Todos os direitos reservados</p>
+    </footer>
+</body>
+</html> 

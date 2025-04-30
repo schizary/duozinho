@@ -6,35 +6,26 @@
     <title>Login - Duozinho</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/PostPage.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
-            <h1>duo<span>zinho</span></h1>
+            <img src="../src/images/duozinhoLOGO.png" alt="Logo" class="logo-icon">
+            <span>duozinho</span>
         </div>
-        
-        <div class="search-bar">
-            <input type="text" placeholder="Procurar jogadores ou jogos...">
-            <button>Buscar</button>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="../../duozinho-gaming-forum.html">Início</a></li>
-                <li><a href="jogos.html">Jogos</a></li>
-                <li><a href="comunidades.html">Comunidades</a></li>
-                <li><a href="perfil.html">Meu Perfil</a></li>
-            </ul>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Times</a>
+            <a href="#">Jogadores</a>
         </nav>
-        
-        <div class="user-profile">
-            <div class="profile-link" onclick="window.location.href='src/pages/login.html'">
-                <img src="../images/perfil.png" alt="Perfil">
-                <span style="color: white;">JogadorPRO</span>
-            </div>
-            <button class="theme-toggle" id="theme-toggle">🌓</button>
+        <div class="actions">
+            <button class="notification-btn"><img src="../src/images/notifications.svg" alt="Notificações"></button>
+            <button class="profile-btn"><img src="../src/images/account_circle.svg" alt="Perfil"></button>
+            <button class="dark-mode-toggle"><img src="../src/images/dark_mode.svg" alt="Modo Escuro"></button>
         </div>
     </header>
 
@@ -71,24 +62,16 @@
     </div>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>duo<span>zinho</span></h2>
-            </div>
-            
-            <div class="footer-links">
-                <ul>
-                    <li><a href="sobre.html">Sobre nós</a></li>
-                    <li><a href="termos.html">Termos de uso</a></li>
-                    <li><a href="privacidade.html">Política de privacidade</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </div>
+        <div class="footer-logo">
+            <img src="../src/images/duozinhoLOGO.png" alt="Logo" class="logo-icon">
+            <span>duozinho</span>
         </div>
-        
-        <div class="footer-copy">
-            &copy; 2025 Duozinho - A melhor plataforma para encontrar parceiros de jogo
-        </div>
+        <nav class="footer-nav">
+            <a href="#">Contato</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <p>&copy; 2025 Duozinho. Todos os direitos reservados</p>
     </footer>
 </body>
 </html> 

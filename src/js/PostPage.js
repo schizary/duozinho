@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    const profileBtn = $('.profile-btn');
     const darkModeToggle = document.querySelector('.dark-mode-toggle');
     const html = document.documentElement;
 
@@ -38,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', toggleTheme);
     }
+
+    profileBtn.on('click', function() {
+        window.location.href = 'cadastro.html';
+    });
 
     // Inicializar
     initializeTheme();

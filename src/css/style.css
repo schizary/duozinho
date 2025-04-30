@@ -16,7 +16,7 @@
     --footer-bg: #2d3436;
     --meta-color: #666;
     --success: #00b894;
-    --border-box: 0 12px 28px 0 rgba(0, 0, 0, 0.2),
+    --border-box: 0 12px 28px 0 rgba(0, 0, 0, 0.1),
     0 2px 4px 0 rgba(0, 0, 0, 0.1),
     inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
@@ -358,7 +358,7 @@ nav ul li a:hover {
 }
 
 .post-card {
-    background-color: var(--card-bg);
+    background-color: var(--bg-color);
     border-radius: 8px;
     box-shadow: var(--border-box);
     overflow: hidden;
